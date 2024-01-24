@@ -14,3 +14,6 @@ def addition(*args):
 print(addition(10,11))
 
 # TODO: pass an existing list
+myNums = [10,20,40]
+
+print(addition(*myNums))
