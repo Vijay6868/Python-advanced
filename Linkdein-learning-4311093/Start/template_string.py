@@ -21,3 +21,5 @@ data = {
 }
 str3=templ.substitute(data)
 print(str3)
+
+

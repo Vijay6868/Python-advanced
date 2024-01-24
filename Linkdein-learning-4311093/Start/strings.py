@@ -1,4 +1,4 @@
-# Example file for Advanced Python: Language Features by Joe Marini
+
 # strings and bytes are not directly interchangeable
 # strings contain unicode, bytes are raw 8-bit values
 
@@ -18,7 +18,9 @@ print(s+s2)
 
 # TODO: Bytes and strings need to be properly encoded and decoded
 # before you can work on them together
-
+s2 = b.decode("utf-8")
+print(s+s2)
 # TODO: encode the string as UTF-32
 b2 = s.encode("utf-8")
 print(b+b2)
+
