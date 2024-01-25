@@ -25,4 +25,10 @@ str_data = {"length: ":l,
             "unique count: ":len(unique)
 }
 pprint.pp(str_data)
+values = ["1", 0, True, [1,2,3], "ABC", 4.0, {}, None]
+result = [str(c) if bool(c) == True else c for c in values]
+print(result)
 
+test_str = "Hello, World! Anyone there?"
+result = {c if c not in string.punctuation else '' for c in test_str}
+print(result)
