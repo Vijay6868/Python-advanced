@@ -28,8 +28,8 @@ class MyColor():
     def __dir__(self):
         return("rgbcolor","hexcolor")
 
-
 # create an instance of myColor
+
 cls1 = MyColor()
 print(cls1.rgbcolor)
 print(cls1.hexcolor)
