@@ -55,7 +55,7 @@ dataset = ["UPPER", 5, "Mixed Case", True, None]
 for d in dataset:
     match d:
         case str() as s if s.isupper():
-            print(f"string is upper case{d}")
+            print(f"string is upper case {d}")
         case str():
             print(f"{d} not a upper case string")
         case bool():
@@ -64,3 +64,14 @@ for d in dataset:
             print(f"{d} is a INT value")
         case _:
             print(f"{d}: Something else")
+
+nums = [1,2,3,4,5,6,7,8,9,10]
+
+for num in nums:
+    match num:
+        case num as n if n%2==0:
+            print(f"{num} is a even num")
+        case num as n if n%2!=0:
+            print(f"{num} is odd num")
+        case _:
+            print(f"{num} not a num")
