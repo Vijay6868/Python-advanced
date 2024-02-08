@@ -19,3 +19,10 @@ print(list(map(celsisus_to_fahrenheit,ctemps)))
 # TODO: Use lambdas to accomplish the same thing
 print(list(map(lambda t: (t-32) * 5/9, ftemps)))
 print(list(map(lambda t : (t*9/5)+32, ctemps)))
+
+# TODO: Practice lambda fundtion
+
+# declaring list of New Zealand dollar currency
+nzd = [10,2,5,90]
+# TODO: change NZD to indian runpee
+print(list(map(lambda c : c*50,nzd)))
