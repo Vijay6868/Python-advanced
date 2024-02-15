@@ -26,3 +26,5 @@ print(list(map(lambda t : (t*9/5)+32, ctemps)))
 nzd = [10,2,5,90]
 # TODO: change NZD to indian runpee
 print(list(map(lambda c : c*50,nzd)))
+
+print()
