@@ -6,8 +6,10 @@ class Publication:
         self.title = title
         self.price = price
 class Periodical(publication):
-    def __init__():
-        pass # continue here
+    def __init__(self, period, publisher):
+        super().__init__()
+        
+
 class Book(Publication):
     def __init__(self, title, author, pages, price):
         super().__init__(title,price)
