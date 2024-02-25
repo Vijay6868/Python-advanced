@@ -12,10 +12,17 @@ class GraphicShape(ABC):
     def calcArea(self):
         pass
 
+class JSONify(ABC):
+    @abstractmethod
+    def toJSON(self):
+        pass
 
-class Circle(GraphicShape):
+class Circle(GraphicShape, JSONify):
     def __init__(self, radius):
         self.radius = radius
+
+    def toJSON(self):
+        return f"\'Circle': {str(self.calcArea())}"
 
     def calcArea(self):
         return 3.14 * (self.radius ** 2)
