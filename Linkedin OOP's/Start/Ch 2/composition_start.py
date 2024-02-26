@@ -18,6 +18,7 @@ class Book:
         result = 0
         for ch in self.chapters:
             result+=ch.pagecount
+        return result
 class Author:
     def __init__(self, fname, lname):
         self.fname = fname
