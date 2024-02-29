@@ -14,23 +14,34 @@
 
 from abc import ABC, abstractmethod
 
+
 class Asset(ABC):
-    
-
-
-
-class Stock():
-    def __init__(self,ticker, price, name):
+    def __init__(self,price):
         self.price = price
+    @abstractmethod
+    def get_description():
+        pass
+    
+        
+class Stock(Asset):
+    def __init__(self,ticker, price, name):
+        super().__init__(price)
         self.ticker = ticker
         self.name = name
 
-    def getDescription():
-        return f"Ticker"
+    def get_description(self):
+        return f"Ticker : {self.name} -- {self.price}"
 
-class Bond():
-    def __init__(self, price):
-        self.price = price
+
+class Bond(Asset):
+    def __init__(self, price, description, duration, yld):
+        super().__init__(price)
+        self.description = description
+        self.duration = duration
+        self.yld = yld
+
+    def get_description(self):
+        return f"description: {self.description} duration'yr' : {self.duration} $price : {self.price} yieldamt% : {self.yld}"
 
 
 # ~~~~~~~~~ TEST CODE ~~~~~~~~~
