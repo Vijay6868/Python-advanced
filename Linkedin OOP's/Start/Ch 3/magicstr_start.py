@@ -21,3 +21,6 @@ b2 = Book("The Catcher in the Rye", "JD Salinger", 29.95)
 
 print(b1)
 print(b2)
+
+print(str(b1))
+print(repr(b2))
