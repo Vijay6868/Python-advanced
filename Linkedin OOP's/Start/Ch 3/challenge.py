@@ -6,6 +6,7 @@
 # Bonds should sort from low to high on yield
 
 from abc import ABC, abstractmethod
+from typing import Any
 
 
 class Asset(ABC):
@@ -22,6 +23,12 @@ class Stock(Asset):
         super().__init__(price)
         self.company = company
         self.ticker = ticker
+    def __lt__(self, value):
+        if not isinstance(value, Stock):
+            raise ValueError("not an instance of stock Class")
+        return self.price < value.price
+    def __str__(self):
+        return f"PRICE : {self.price}"
 
 
 class Bond(Asset):
@@ -31,6 +38,13 @@ class Bond(Asset):
         self.duration = duration
         self.yieldamt = yieldamt
 
+    def __lt__(self, value):
+        if not isinstance(value, Bond):
+            raise ValueError("not a instance of Bond class")
+        return self.yieldamt < value.yieldamt
+    
+    def __str__(self):
+        return f"YIELD : {self.yieldamt}"
 
 # ~~~~~~~~~ TEST CODE ~~~~~~~~~
 stocks = [
