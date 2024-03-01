@@ -39,6 +39,9 @@ b4 = Book("To Kill a Mockingbird", "Harper Lee", 24.95)
 print(b1==b3)
 # TODO: Check for greater and lesser value
 print(b1>b2)
-
-# TODO: Now we can sort them too
 print(b1==b4)
+# TODO: Now we can sort them too
+books = [b1,b2,b3,b4]
+books.sort()
+
+print([book.title for book in books])
